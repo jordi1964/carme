@@ -194,6 +194,10 @@ div.confused {
   padding: 0;
 }
 
+#nono {
+  display: none;
+}
+
 /** Horitzontal **/
 
 div.horitzontal {
@@ -319,7 +323,7 @@ div.confused-negre {
 }
 
 
-/** Media queries **/
+/** Media queries horitzontal/vertical
 
 @media only screen and (min-width:576px), (orientation: landscape) {
   div.vertical {
@@ -329,6 +333,11 @@ div.confused-negre {
     display: block;
   }
 }
+
+**/
+
+
+/** Media query x pantalla gran **/
 
 @media only screen and (min-width:992px) {
   div.vertical {
