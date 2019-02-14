@@ -1,0 +1,518 @@
+
+
+/* ==================================================
+Proves NO GIRAR MOBIL
+=============================================== */
+
+
+
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==================================================
+ESTILS GLOBALS
+=============================================== */
+
+/* Box-sizing: border-box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* Segment (copiat i adaptat de la configuració de línia horitzontal <hr> que venia per defecte en BOILERPLATE) */
+hr {
+    display: block;
+    height: 2px; /* Fa algo??*/
+    width: 80px;
+    border: 0;
+    border-top: 2px solid #f5f0ed;
+    margin: 1em auto;
+    padding: 0;
+}
+
+/* provo de fer el segment amb un span, però no rutlla i no sé perquè... ho deixo amb el <hr>
+div.destacado div.texto span {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 80px;
+    border: 0;
+    margin: 20px auto;
+    padding: 0; */
+
+/* .contenedor és classe "genèrica"*/
+.container {
+  width: 98%; /* evitem que en mòbil toqui vores */
+  margin: 0 auto; /* margin "auto" centra contingut */
+}
+
+/* definim tipo global Open Sans */
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* ENCAPÇALAMENTS h1 - h6 */
+
+/* cos de lletra variarà a partir de 480 px */
+h2 {
+  font-weight: bold; /* la tipo Open Sans l'hem definit abans com a global per a tota la pàgina */
+  color: #fff;
+  font-size: 12vh;
+  text-align: center;
+  text-transform: none;
+  /* esborro possibles estils per defecte de margin i padding */
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  font-weight: bold; /* la tipo Open Sans l'hem definit abans com a global per a tota la pàgina */
+  color: #fff;
+  font-size: 8vh;
+  text-align: center;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 6vh;
+  text-align: center;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+p {
+  font-weight: regular; /* la tipo Open Sans l'hem definit abans com a global per a tota la pàgina */
+  color: #f5f0ed;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+@media only screen and (min-width:480px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+
+
+/* ==================================================
+ESTILS LOCALS
+=============================================== */
+
+div.rectangle {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+
+
+
+/** Vertical **/
+
+div.vertical {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f00;
+  display: table;
+}
+
+div.contingut {
+  display: table-cell;
+	vertical-align: middle;
+  height: auto;
+}
+
+div.text {
+  margin: 0 auto 2rem auto;
+  padding: 0;
+}
+
+div.confused {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.confused img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/** Horitzontal **/
+
+div.horitzontal {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: none;
+}
+
+div.grid-h {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-rows: 30vh auto auto;
+}
+
+div.text-h {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 10vh 5vh;
+  padding: 0;
+}
+
+div.cry {
+  grid-area: 2 / 3 / 4 / 4;
+  margin: 7vh 5vh 0 5vh;
+  padding: 0;
+}
+
+.cry img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 20vw;
+}
+
+
+/** Vertibis **/
+
+div.verti-negre {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: none;
+}
+
+div.verti-vermell {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f00;
+  display: table;
+}
+
+div.tongue {
+  display: table-cell;
+	vertical-align: middle;
+  height: auto;
+}
+
+.tongue img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.cercle {
+  animation: magic 10s infinite;
+}
+@keyframes magic {
+  0% {
+    -webkit-clip-path: circle(100%);
+    clip-path: circle(100%);
+  }
+  50% {
+    -webkit-clip-path: circle(0%);
+    clip-path: circle(0%);
+  }
+  100% {
+    -webkit-clip-path: circle(0%);
+    clip-path: circle(0%);
+  }
+}
+
+
+/** Laptop **/
+
+div.laptop {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: none;
+}
+
+div.grid-laptop {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 10vw auto auto 10vw;
+  grid-template-rows: 30vh auto auto;
+}
+
+div.text-laptop {
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 10vh 5vh;
+  padding: 0;
+}
+
+div.confused-negre {
+  grid-area: 2 / 3 / 4 / 4;
+  margin: 7vh 5vh 0 5vh;
+  padding: 0;
+}
+
+.confused-negre img {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 20vw;
+}
+
+
+/** Media queries **/
+
+@media only screen and (min-width:576px), (orientation: landscape) {
+  div.vertical {
+    display: none;
+  }
+  div.horitzontal {
+    display: block;
+  }
+}
+
+@media only screen and (min-width:992px) {
+  div.vertical {
+    display: none;
+  }
+  div.horitzontal {
+    display: none;
+  }
+  div.laptop {
+    display: block;
+  }
+}
+
+
+
+/* ==================================================
+Helper classes
+=============================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
