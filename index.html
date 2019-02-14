@@ -1,4 +1,4 @@
-<!-- Proves NO GIRAR MOBIL -->
+<!-- Proves NO GIRAR MOBIL-3 -->
 
 <!doctype html>
 
@@ -20,13 +20,14 @@
 
   <!-- Vertical -->
   <!-- Per centrar element respecte finestra necessitem 2 divs: l'exterior alinia verticalment, via display table-cell; l'interior alinia horitzontalment, via amplada determinada i margin: auto -->
-  <div id="nono" class="vertical">
+  <div class="vertical">
     <div class="contingut">
       <div class="text">
         <h3>Carme,</h3>
         <h4>sobretot</h4>
         <h2>NO</h2>
-        <h4>giris<br>la pantalla<br>del mòbil</h4>
+        <h3>GIRIS</H3>
+        <H4>la pantalla<br>del mòbil</h4>
       </div>
       <div class="confused">
         <img src="img/Confused-animacio-vermella.gif" alt="No ho facis">
@@ -35,7 +36,7 @@
   </div><!-- Vertical -->
 
   <!-- Horitzontal -->
-  <div id="nicas" class="horitzontal">
+  <div class="horitzontal" onclick="openTongue()">
       <div class="grid-h">
         <div class="text-h">
           <h2>No em fas<br>mai cas</h2>
@@ -46,9 +47,9 @@
       </div>
   </div>
 
-  <!-- Vertibis -->
-  <div id="brrt" class="verti-negre">
-    <div class="verti-vermell cercle">
+  <!-- Tongue -->
+  <div id="brrt">
+    <div class="tongue-vermell cercle">
       <div class="tongue">
         <img src="img/Tongue-animacio-vermella.gif" alt="Brrt">
       </div>
@@ -56,7 +57,7 @@
   </div>
 
   <!-- Laptop -->
-  <div class="laptop">
+  <div class="laptop" onclick="openTongue()">
       <div class="grid-laptop">
         <div class="text-laptop">
           <h4>Amb aquesta pantalla tan gran no veuràs el que t'he de dir</h4>
@@ -66,6 +67,7 @@
         </div>
       </div>
   </div>
+
 
 
 
