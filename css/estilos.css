@@ -1,7 +1,7 @@
 
 
 /* ==================================================
-Proves NO GIRAR MOBIL
+Proves NO GIRAR MOBIL-3
 =============================================== */
 
 
@@ -102,7 +102,7 @@ body {
 h2 {
   font-weight: bold; /* la tipo Open Sans l'hem definit abans com a global per a tota la pàgina */
   color: #fff;
-  font-size: 12vh;
+  font-size: 10vh;
   text-align: center;
   text-transform: none;
   /* esborro possibles estils per defecte de margin i padding */
@@ -113,7 +113,7 @@ h2 {
 h3 {
   font-weight: bold; /* la tipo Open Sans l'hem definit abans com a global per a tota la pàgina */
   color: #fff;
-  font-size: 8vh;
+  font-size: 7vh;
   text-align: center;
   text-transform: none;
   margin: 0;
@@ -123,7 +123,7 @@ h3 {
 h4 {
   font-weight: bold;
   color: #fff;
-  font-size: 6vh;
+  font-size: 5vh;
   text-align: center;
   text-transform: none;
   margin: 0;
@@ -194,10 +194,6 @@ div.confused {
   padding: 0;
 }
 
-#nono {
-  display: none;
-}
-
 /** Horitzontal **/
 
 div.horitzontal {
@@ -214,7 +210,7 @@ div.grid-h {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto auto 1fr;
-  grid-template-rows: 30vh auto auto;
+  grid-template-rows: 25vh auto auto;
 }
 
 div.text-h {
@@ -237,16 +233,20 @@ div.cry {
 }
 
 
-/** Vertibis **/
+/** Tongue **/
 
-div.verti-negre {
+div#brrt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
   background-color: #000;
   display: none;
 }
 
-div.verti-vermell {
+div.tongue-vermell {
   width: 100vw;
   height: 100vh;
   background-color: #f00;
@@ -266,7 +266,9 @@ div.tongue {
 }
 
 .cercle {
-  animation: magic 10s infinite;
+  animation: magic 10s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
 }
 @keyframes magic {
   0% {
@@ -300,12 +302,12 @@ div.grid-laptop {
   height: 100%;
   display: grid;
   grid-template-columns: 10vw auto auto 10vw;
-  grid-template-rows: 30vh auto auto;
+  grid-template-rows: 25vh auto auto;
 }
 
 div.text-laptop {
   grid-area: 2 / 2 / 3 / 3;
-  margin: 10vh 5vh;
+  margin: 0 5vh;
   padding: 0;
 }
 
@@ -323,9 +325,9 @@ div.confused-negre {
 }
 
 
-/** Media queries horitzontal/vertical **/
+/** Media queries **/
 
-@media only screen and (min-width:576px), (orientation: landscape) {
+@media only screen and (orientation: landscape) {
   div.vertical {
     display: none;
   }
@@ -333,11 +335,6 @@ div.confused-negre {
     display: block;
   }
 }
-
-
-
-
-/** Media query x pantalla gran **/
 
 @media only screen and (min-width:992px) {
   div.vertical {
