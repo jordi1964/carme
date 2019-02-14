@@ -11,9 +11,10 @@ var mql = window.matchMedia("(orientation: portrait)");
 // If there are matches, we're in portrait
 if(mql.matches) {
  // Portrait orientation
- document.getElementById('brrt').style.display = "block";
+ document.getElementById('nono').style.display = "block";
 } else {
  // Landscape orientation
+ document.getElementById('nicas').style.display = "block";
 }
 
 // Add a media query change listener
