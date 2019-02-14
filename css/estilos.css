@@ -323,7 +323,7 @@ div.confused-negre {
 }
 
 
-/** Media queries horitzontal/vertical
+/** Media queries horitzontal/vertical **/
 
 @media only screen and (min-width:576px), (orientation: landscape) {
   div.vertical {
@@ -334,7 +334,7 @@ div.confused-negre {
   }
 }
 
-**/
+
 
 
 /** Media query x pantalla gran **/
