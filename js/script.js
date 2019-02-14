@@ -2,6 +2,14 @@
 ========================================== */
 
 
+2
+3
+	
+window.addEventListener("orientationchange", function() {
+    alert("Orientation angle is " + screen.orientation.angle);
+});
+
+
 /** Script detecció rotació **/
 /* Copiat de https://davidwalsh.name/orientation-change */
 
